@@ -1,0 +1,19 @@
+{
+  "name": "techshare-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "intro/index.js",
+  "scripts": {
+    "start": "npm run build:live",
+    "build:live": "nodemon -q --exec ./node_modules/.bin/ts-node -- ./intro/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "8.0.3",
+    "nodemon": "1.11.0",
+    "ts-node": "3.1.0",
+    "typescript": "2.3.4"
+  }
+}
