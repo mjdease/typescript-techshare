@@ -4,9 +4,9 @@
 * Adds optional static typing and type inference
 ```typescript
 let foo: string;
-let bar = 'string';
+let bar = 'test';
 
-foo = 'string'; // Valid
+foo = 'test'; // Valid
 
 foo = 10; // Error
 bar = 10; // Error (bar has inferred type of 'string')
