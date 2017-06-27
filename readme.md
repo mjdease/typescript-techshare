@@ -1,0 +1,1 @@
+Introduction to typescript covering the basic ideas behind typescript, code samples of patterns I've found repeatedly useful, and common issues you'll run into on real projects.
