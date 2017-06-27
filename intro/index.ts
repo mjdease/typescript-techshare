@@ -50,17 +50,13 @@ let statusMessages: statusMap = {
 
 
 
-interface IBasicSystem {
-  state: statusType;
-}
-
-interface IBetterSystem extends IBasicSystem {
-  // newProp: string[];
+interface ISystem {
+  status: statusType;
   displayStatus(): void;
 }
 
 
-class System implements IBetterSystem {
+class System implements ISystem {
   private _name: string;
   private _status: statusType;
   private _lastUpdatedDate: Date;
@@ -76,17 +72,17 @@ class System implements IBetterSystem {
     this._name = name;
     // TS complains if there's no existence check here
     if (status) {
-      this.state = status;
+      this.status = status;
     }
   }
 
   // Getters take no arguments and must return a value.
-  public get state() {
+  public get status() {
     return this._status;
   }
   // Setters always accept one argument and return nothing.
   // Accessors should be _fast_
-  public set state(newStatus: statusType) {
+  public set status(newStatus: statusType) {
     this._status = newStatus;
     this._lastUpdatedDate = new Date();
   }
@@ -102,8 +98,8 @@ class System implements IBetterSystem {
 
 
 let mySystem: System = new System('System 1');
-mySystem.state = 'online';
+mySystem.status = 'online';
 mySystem.displayStatus();
 
-// let myNewSystem: ISystem = new System('System 2.0', '');
-// myNewSystem.displayStatus();
+let myNewSystem: ISystem = new System('System 2.0', 'connecting');
+myNewSystem.displayStatus();

@@ -1,7 +1,7 @@
 ## Why Use TypeScript?
 ---
 * Identifies many hard to find errors before the code gets executed
-* Static analysis allows for enhanced IDE support
+* Static analysis allows for enhanced tooling support
   * Refactor names across entire codebase
   * Code completion and inline documentation
   * Inline error highlighting

@@ -1,14 +1,10 @@
 ## What is TypeScript?
 ---
 * Language that aligns with the ECMAScript standard and proposals
-* Adds optional static typing and type inference
+* Adds optional static typing
 ```typescript
 let foo: string;
-let bar = 'test';
-
-foo = 'test'; // Valid
-
-foo = 10; // Error
-bar = 10; // Error (bar has inferred type of 'string')
+foo = 'bar'; // Valid
+foo = 845; // Error
 ```
 * Compiles to standard JavaScript (ES target is configurable)
