@@ -18,8 +18,15 @@ let statusTest: statusType = 'online';
 
 
 
+
+
+
+
+
+
+
 /**
- * Maps status values to arbitrary messages
+ * Object where the keys are of type statusType and the values are any string
  */
 type statusMap = {
   [key in statusType]: string;
@@ -38,12 +45,22 @@ let statusMessages: statusMap = {
 
 
 
-interface ISystem {
+
+
+
+
+
+interface IBasicSystem {
   state: statusType;
+}
+
+interface IBetterSystem extends IBasicSystem {
+  // newProp: string[];
   displayStatus(): void;
 }
 
-class System implements ISystem {
+
+class System implements IBetterSystem {
   private _name: string;
   private _status: statusType;
   private _lastUpdatedDate: Date;
@@ -57,14 +74,18 @@ class System implements ISystem {
 
   constructor(name: string, status?: statusType) {
     this._name = name;
+    // TS complains if there's no existence check here
     if (status) {
       this.state = status;
     }
   }
 
+  // Getters take no arguments and must return a value.
   public get state() {
     return this._status;
   }
+  // Setters always accept one argument and return nothing.
+  // Accessors should be _fast_
   public set state(newStatus: statusType) {
     this._status = newStatus;
     this._lastUpdatedDate = new Date();
@@ -76,6 +97,7 @@ class System implements ISystem {
     console.log(timeString, `${this._name}:`, message);
   }
 }
+
 
 
 
