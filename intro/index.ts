@@ -101,5 +101,5 @@ let mySystem: System = new System('System 1');
 mySystem.status = 'online';
 mySystem.displayStatus();
 
-let myNewSystem: ISystem = new System('System 2.0', 'connecting');
-myNewSystem.displayStatus();
+// let myNewSystem: ISystem = new System('System 2.0', '');
+// myNewSystem.displayStatus();
