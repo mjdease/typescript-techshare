@@ -76,13 +76,16 @@ class System implements ISystem {
     }
   }
 
+  // Note these class method definitions don't require parameter or return type annotations
+  // because thier types are inferred from the interface this class implements.
+
   // Getters take no arguments and must return a value.
   public get status() {
     return this._status;
   }
   // Setters always accept one argument and return nothing.
   // Accessors should be _fast_
-  public set status(newStatus: statusType) {
+  public set status(newStatus) {
     this._status = newStatus;
     this._lastUpdatedDate = new Date();
   }
