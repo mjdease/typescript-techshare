@@ -134,4 +134,4 @@ mySystem.displayStatus();
 
 
 // Error if target is es5 or older
-// Object.assign(/*...*/)
+// Object.assign({}, {});
