@@ -32,7 +32,7 @@ type statusMap = {
   [key in statusType]: string;
 }
 
-let statusMessages: statusMap = {
+let statusMessagesTest: statusMap = {
   online: 'test online',
   offline: 'test offline',
   connecting: 'test connecting',
@@ -41,6 +41,37 @@ let statusMessages: statusMap = {
 
 
 
+
+
+
+
+
+//Type inference
+
+let x = 890;
+x = 1000;
+// x = true; // Error
+
+
+
+
+
+
+
+
+
+
+//Contextual Types
+
+type myFuncType = (s: statusType, sm: statusMap) => string;
+
+
+let getStatusMessage: myFuncType = function(status, statusMessages) {
+  // statusMessages
+  return statusMessages[status];
+};
+
+getStatusMessage(statusTest, statusMessagesTest);
 
 
 
@@ -104,5 +135,11 @@ let mySystem: System = new System('System 1');
 mySystem.status = 'online';
 mySystem.displayStatus();
 
-// let myNewSystem: System = new System('System 2.0', '');
+// let myNewSystem: System = new System('Jira', 'onfire');
 // myNewSystem.displayStatus();
+
+
+
+
+// Error if target is es5 or older
+// Object.assign(/*...*/)

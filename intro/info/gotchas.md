@@ -1,4 +1,4 @@
-## Gotchas
+## Common Issues
 ---
 * Does not include polyfills for new APIs (Object.assign, Promises, etc).
   1. Include polyfills (and their associated type declarations) yourself
