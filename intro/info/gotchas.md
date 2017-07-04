@@ -8,6 +8,12 @@
 * Third party libraries don't include typings
   1. Install types if available at @types/[package name]
   2. Use module augmentation to write your own type declaration file
+  eg:
+  ```typescript
+  declare module 'exact-package-name' {
+    // Type declarations
+  }
+  ```
   3. Import the module as type `any`
 
 * It can be hard to know _how_ to use the type definitions for third party libraries
