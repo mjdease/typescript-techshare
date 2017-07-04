@@ -46,32 +46,24 @@ let statusMessagesTest: statusMap = {
 
 
 
-//Type inference
+// Type inference
 
 let x = 890;
 x = 1000;
 // x = true; // Error
 
 
-
-
-
-
-
-
-
-
-//Contextual Types
+// Contextual Types
 
 type myFuncType = (s: statusType, sm: statusMap) => string;
 
 
 let getStatusMessage: myFuncType = function(status, statusMessages) {
-  // statusMessages
+  // statusMessages.
   return statusMessages[status];
 };
 
-getStatusMessage(statusTest, statusMessagesTest);
+getStatusMessage(statusTest, statusMessagesTest); // 'test online'
 
 
 
